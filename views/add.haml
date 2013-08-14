@@ -1,1 +1,14 @@
 %h2 Add New Note
+
+#submit_form
+	%form{:action => "/add", :method => "POST"}
+		%fieldset
+			%ol
+				%li#post_title
+					%label{:for => "title"} Title:
+					%input{:type => "text", :name => "post[title]"}
+				%li#post_note
+					%label{:for => "note"} Note:
+					%textarea{:type => "text", :name => "post[note]"}
+				%li
+					%input{:type => "submit"}

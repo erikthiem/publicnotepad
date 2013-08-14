@@ -8,6 +8,11 @@ require 'haml'
 	end
 end
 
+post '/add' do
+	@post = params[:post]
+	redirect '/view'
+end
+
 get '/view' do
 	@current_page = "view"
 	haml :view
